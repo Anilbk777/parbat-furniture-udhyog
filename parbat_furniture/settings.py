@@ -18,7 +18,8 @@ DEBUG = False
 
 # ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['parbat-furniture-udhyog-1.onrender.com', 'parbat-furniture-udhyog.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['parbat-furniture-udhyog.onrender.com']
+
 
 
 # Application definition
