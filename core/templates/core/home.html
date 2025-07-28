@@ -1,0 +1,144 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block meta_description %}Parbat Furniture Udhyog - Leading furniture manufacturer in Nepal. Premium quality custom
+furniture for homes and offices. Visit our showroom today!{% endblock %}
+{% block meta_keywords %}furniture Nepal, custom furniture, home furniture, office furniture, Parbat Furniture,
+furniture manufacturer{% endblock %}
+
+{% block title %}Home - Parbat Furniture Udhyog | Premium Quality Furniture{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-card">
+            <div class="hero-content">
+                <div class="hero-badge">PARBAT FURNITURE</div>
+                <h1 class="hero-title">LUXURY<br>FURNITURE</h1>
+                <p class="hero-subtitle">Transform your space with handcrafted premium furniture that combines
+                    traditional Nepali craftsmanship with modern innovation.</p>
+                <div class="hero-buttons">
+                    <a href="/products/" class="btn btn-primary">Explore Collection</a>
+                    <a href="/contact/" class="btn btn-secondary">Get Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'images/hero-furniture.png' %}" alt="Premium furniture showcase" loading="eager"
+                    decoding="async" fetchpriority="high">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose Parbat Furniture?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                </div>
+                <h3>Premium Quality</h3>
+                <p>Handcrafted furniture using finest materials and traditional techniques for lasting durability.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                </div>
+                <h3>Custom Design</h3>
+                <p>Personalized furniture solutions tailored to your specific needs and space requirements.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                </div>
+                <h3>Expert Craftsmanship</h3>
+                <p>Skilled artisans with years of experience creating beautiful, functional furniture pieces.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Preview -->
+<section class="products-preview" id="products">
+    <div class="container">
+        <h2 class="section-title">Our Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'images/sofa-set.jfif' %}" alt="Premium sofa set" loading="lazy">
+                </div>
+                <h3 class="product-title">Sofa Sets</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'images/dining-table.jpg' %}" alt="Dining table set" loading="lazy">
+                </div>
+                <h3 class="product-title">Dining Tables</h3>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'images/bedroom-set.jpg' %}" alt="Bedroom furniture set" loading="lazy">
+                </div>
+                <h3 class="product-title">Bedroom Sets</h3>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/products/" class="btn btn-primary">View All Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="location" id="location">
+    <div class="container">
+        <h2 class="section-title">Visit Our Showroom</h2>
+        <div class="location-content">
+            <div class="location-info">
+                <h3>Find Us Here</h3>
+                <p>Visit our showroom to experience our furniture collection firsthand. Our expert team is ready to help
+                    you find the perfect pieces for your space.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <strong>Address:</strong> Pokhara-7, Shantinagar Chowk, Nepal
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> +977-9817109058
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> anilghatan7@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                {% include 'core/map_embed.html' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Contact us today for a free consultation and quote.</p>
+        <a href="/contact/" class="btn btn-primary">Get Started</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,383 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block meta_description %}Explore our premium furniture collection - Sofa sets, dining tables, bedroom furniture,
+office furniture, and custom designs. Quality craftsmanship by Parbat Furniture Udhyog.{% endblock %}
+{% block meta_keywords %}furniture collection, sofa sets, dining tables, bedroom furniture, office furniture, custom
+furniture, Nepal furniture{% endblock %}
+
+{% block title %}Our Products - Parbat Furniture Udhyog | Premium Furniture Collection{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Our Premium Furniture Collection</h1>
+        <p class="lead">Discover our wide range of handcrafted furniture designed to transform your space with elegance
+            and functionality.</p>
+    </div>
+</section>
+
+<!-- Products Categories -->
+<section class="products-section">
+    <div class="container">
+        <!-- Living Room Furniture -->
+        <div class="product-category">
+            <h2 class="category-title">Living Room Furniture</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('sofa-sets')">
+                    <div class="product-image">
+                        <img src="{% static 'images/sofa-set.jfif' %}" alt="Premium Sofa Sets" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Sofa Sets</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('coffee-tables')">
+                    <div class="product-image">
+                        <img src="{% static 'images/coffee-table.webp' %}" alt="Coffee Tables" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Coffee Tables</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('tv-units')">
+                    <div class="product-image">
+                        <img src="{% static 'images/tv-stand.webp' %}" alt="TV Units" loading="lazy">
+                    </div>
+                    <h3 class="product-title">TV Units & Entertainment Centers</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dining Room Furniture -->
+        <div class="product-category">
+            <h2 class="category-title">Dining Room Furniture</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('dining-tables')">
+                    <div class="product-image">
+                        <img src="{% static 'images/tables.jpeg' %}" alt="Dining Tables" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Dining Tables</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('dining-chairs')">
+                    <div class="product-image">
+                        <img src="{% static 'images/dining-table.jpg' %}" alt="Dining Chairs" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Dining Chairs</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('buffets-sideboards')">
+                    <div class="product-image">
+                        <img src="{% static 'images/buffets.webp' %}" alt="Buffets and Sideboards" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Buffets & Sideboards</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bedroom Furniture -->
+        <div class="product-category">
+            <h2 class="category-title">Bedroom Furniture</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('bedroom-sets')">
+                    <div class="product-image">
+                        <img src="{% static 'images/bedroom-set.jpg' %}" alt="Bedroom Sets" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Complete Bedroom Sets</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('wardrobes')">
+                    <div class="product-image">
+                        <img src="{% static 'images/wardrobe.jpg' %}" alt="Wardrobes" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Wardrobes & Closets</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('dressing-tables')">
+                    <div class="product-image">
+                        <img src="{% static 'images/dressing-table.jpg' %}" alt="Dressing Tables" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Dressing Tables</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Office Furniture -->
+        <div class="product-category">
+            <h2 class="category-title">Office Furniture</h2>
+            <div class="products-grid">
+                <div class="product-card" onclick="openProductModal('office-desks')">
+                    <div class="product-image">
+                        <img src="{% static 'images/office-furniture.webp' %}" alt="Office Desks" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Office Desks & Workstations</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('office-chairs')">
+                    <div class="product-image">
+                        <img src="{% static 'images/office-chairs.jpg' %}" alt="Office Chairs" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Office Chairs</h3>
+                </div>
+
+                <div class="product-card" onclick="openProductModal('conference-tables')">
+                    <div class="product-image">
+                        <img src="{% static 'images/conference-table.jpg' %}" alt="Conference Tables" loading="lazy">
+                    </div>
+                    <h3 class="product-title">Conference Tables</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Furniture -->
+        <div class="product-category">
+            <h2 class="category-title">Custom Furniture Solutions</h2>
+            <div class="custom-furniture-section">
+                <div class="custom-info-full">
+                    <h3>Personalized Furniture Design</h3>
+                    <p>We specialize in creating custom furniture pieces tailored to your specific needs, space
+                        requirements, and design preferences. Our skilled craftsmen work closely with you to bring your
+                        vision to life.</p>
+
+                    <div class="custom-features">
+                        <div class="feature-item">
+                            <h4>Design Consultation</h4>
+                            <p>Free consultation to understand your requirements and provide design recommendations.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Material Selection</h4>
+                            <p>Choose from a wide range of premium wood types, finishes, and hardware options.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Space Optimization</h4>
+                            <p>Custom sizing and design to maximize your space utilization and functionality.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Quality Craftsmanship</h4>
+                            <p>Expert artisans ensure every piece meets our high standards of quality and durability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Interested in Our Furniture?</h2>
+        <p>Contact us to discuss your furniture needs and get a personalized quote for your project.</p>
+        <a href="/contact/" class="btn btn-primary">Get Quote</a>
+    </div>
+</section>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Product Details</h2>
+            <span class="close" onclick="closeProductModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img id="modalImage" src="" alt="" loading="lazy">
+            </div>
+            <div class="modal-info">
+                <h3 id="modalProductTitle">Product Name</h3>
+                <p id="modalDescription">Product description will appear here.</p>
+                <ul id="modalFeatures" class="product-features">
+                    <!-- Features will be populated by JavaScript -->
+                </ul>
+                <div class="modal-actions">
+                    <a href="/contact/" class="btn btn-primary">Get Quote</a>
+                    <button class="btn btn-secondary" onclick="closeProductModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Product data
+    const productData = {
+        'sofa-sets': {
+            title: 'Sofa Sets',
+            image: '{% static "images/sofa-set.jfif" %}',
+            description: 'Comfortable and elegant sofa sets crafted with premium materials. Available in various designs from modern to traditional styles.',
+            features: [
+                'Premium fabric and leather options',
+                'Solid wood frame construction',
+                'Custom size and color options',
+                'Ergonomic design for comfort'
+            ]
+        },
+        'coffee-tables': {
+            title: 'Coffee Tables',
+            image: '{% static "images/coffee-table.webp" %}',
+            description: 'Stylish coffee tables that serve as the centerpiece of your living room. Functional and beautiful designs.',
+            features: [
+                'Solid wood construction',
+                'Storage options available',
+                'Various shapes and sizes',
+                'Matching furniture sets'
+            ]
+        },
+        'tv-units': {
+            title: 'TV Units & Entertainment Centers',
+            image: '{% static "images/tv-stand.webp" %}',
+            description: 'Modern TV units and entertainment centers designed to organize your media equipment while enhancing your living space.',
+            features: [
+                'Cable management systems',
+                'Multiple storage compartments',
+                'Modern and traditional designs',
+                'Custom sizing available'
+            ]
+        },
+        'dining-tables': {
+            title: 'Dining Tables',
+            image: '{% static "images/tables.jpeg" %}',
+            description: 'Beautiful dining tables for memorable family gatherings. Crafted from premium wood with attention to detail.',
+            features: [
+                'Solid wood construction',
+                'Various seating capacities',
+                'Extendable options available',
+                'Matching chair sets'
+            ]
+        },
+        'dining-chairs': {
+            title: 'Dining Chairs',
+            image: '{% static "images/dining-table.jpg" %}',
+            description: 'Comfortable dining chairs that complement our dining tables. Available in various styles and upholstery options.',
+            features: [
+                'Ergonomic design',
+                'Fabric and leather options',
+                'Sturdy construction',
+                'Custom upholstery available'
+            ]
+        },
+        'buffets-sideboards': {
+            title: 'Buffets & Sideboards',
+            image: '{% static "images/buffets.webp" %}',
+            description: 'Elegant storage solutions for your dining room. Perfect for displaying and storing dinnerware and serving pieces.',
+            features: [
+                'Ample storage space',
+                'Beautiful wood finishes',
+                'Glass door options',
+                'Custom designs available'
+            ]
+        },
+        'bedroom-sets': {
+            title: 'Complete Bedroom Sets',
+            image: '{% static "images/bedroom-set.jpg" %}',
+            description: 'Complete bedroom solutions for peaceful rest. Includes bed, wardrobes, and matching furniture pieces.',
+            features: [
+                'Coordinated furniture sets',
+                'Various bed sizes available',
+                'Storage solutions included',
+                'Premium wood construction'
+            ]
+        },
+        'wardrobes': {
+            title: 'Wardrobes & Closets',
+            image: '{% static "images/wardrobe.jpg" %}',
+            description: 'Spacious wardrobes and closet systems designed to organize your clothing and accessories efficiently.',
+            features: [
+                'Sliding and hinged door options',
+                'Interior organization systems',
+                'Mirror options available',
+                'Custom sizing and layout'
+            ]
+        },
+        'dressing-tables': {
+            title: 'Dressing Tables',
+            image: '{% static "images/dressing-table.jpg" %}',
+            description: 'Elegant dressing tables with mirrors and storage. Perfect addition to any bedroom for daily grooming routines.',
+            features: [
+                'Built-in mirrors',
+                'Multiple storage drawers',
+                'Matching stool included',
+                'Various design styles'
+            ]
+        },
+        'office-desks': {
+            title: 'Office Desks & Workstations',
+            image: '{% static "images/office-furniture.webp" %}',
+            description: 'Professional furniture for productive workspaces. Designed for comfort and efficiency in office environments.',
+            features: [
+                'Ergonomic design',
+                'Cable management systems',
+                'Storage solutions',
+                'Various sizes available'
+            ]
+        },
+        'office-chairs': {
+            title: 'Office Chairs',
+            image: '{% static "images/office-chairs.jpg" %}',
+            description: 'Comfortable office chairs designed for long working hours. Adjustable features for optimal comfort and support.',
+            features: [
+                'Adjustable height and tilt',
+                'Lumbar support',
+                'Premium upholstery',
+                'Swivel and mobility features'
+            ]
+        },
+        'conference-tables': {
+            title: 'Conference Tables',
+            image: '{% static "images/conference-table.jpg" %}',
+            description: 'Professional conference tables for meetings and presentations. Available in various sizes and configurations.',
+            features: [
+                'Large seating capacity',
+                'Cable management',
+                'Premium wood finishes',
+                'Modular options available'
+            ]
+        }
+    };
+
+    // Modal functions
+    function openProductModal(productId) {
+        const product = productData[productId];
+        if (!product) return;
+
+        document.getElementById('modalTitle').textContent = 'Product Details';
+        document.getElementById('modalProductTitle').textContent = product.title;
+        document.getElementById('modalImage').src = product.image;
+        document.getElementById('modalImage').alt = product.title;
+        document.getElementById('modalDescription').textContent = product.description;
+
+        // Populate features
+        const featuresList = document.getElementById('modalFeatures');
+        featuresList.innerHTML = '';
+        product.features.forEach(feature => {
+            const li = document.createElement('li');
+            li.textContent = feature;
+            featuresList.appendChild(li);
+        });
+
+        document.getElementById('productModal').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeProductModal() {
+        document.getElementById('productModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function (event) {
+        const modal = document.getElementById('productModal');
+        if (event.target === modal) {
+            closeProductModal();
+        }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeProductModal();
+        }
+    });
+</script>
+{% endblock %}
